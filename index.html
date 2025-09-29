@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quizzy Quest - Welcome</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+  <div class="toggle-theme">
+    <label><input type="checkbox" id="theme-toggle" onchange="toggleTheme()"> 🌙</label>
+  </div>
+  <div class="auth-container">
+    <h1 class="game-title">🎮 Quizzy Quest</h1>
+    <div id="auth-tabs">
+      <button onclick="toggleForm('login')" class="tab active">Login</button>
+      <button onclick="toggleForm('signup')" class="tab">Sign Up</button>
+    </div>
+    <div id="forms">
+      <div id="login-form" class="form">
+        <input type="text" id="login-username" placeholder="Username">
+        <input type="password" id="login-password" placeholder="Password">
+        <button onclick="login()">Login</button>
+      </div>
+      <div id="signup-form" class="form hidden">
+        <input type="text" id="signup-username" placeholder="Create Username">
+        <input type="password" id="signup-password" placeholder="Create Password">
+        <button onclick="signup()">Sign Up</button>
+      </div>
+    </div>
+    <p class="quote">"Play smart. Learn fast. Win big."</p>
+  </div>
+  <div id="toast"></div>
+  <script src="auth.js"></script>
+  <script src="theme.js"></script>
+  <script src="toasts.js"></script>
+</body>
+</html>
